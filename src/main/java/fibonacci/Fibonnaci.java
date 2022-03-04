@@ -1,11 +1,22 @@
 package fibonacci;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 
 public class Fibonnaci {
+    List<Integer> values = new ArrayList<>();
     public int compute(int number){
-        if (number < 0)
+        if (number < 0) // Negative number trap
             throw new InputMismatchException("ERROR: Number: "+number+ " is negative");
-        return number;
+        if(number > 46) //Integer Max Value overflow
+            throw new RuntimeException("ERROR: The maximum value is 47 due to Integer.MAXVALUE overflow. Your entry was:"+ number);
+        int values[] = new int[number+2];
+        values[1] = 1;
+
+        for(int i = 2; i<= number; i++){
+         values[i] = values[i-1] + values[i-2];
+        }
+        return values[number];
     }
 }
