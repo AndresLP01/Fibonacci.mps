@@ -59,7 +59,7 @@ public class FibonacciTest {
     public void CaseOverExceedIntegerMaxValue(){
         /*
         Fibonacci(47) return 2971215073 but the maximum value of Integer is 2147483647.
-        This limit could be increased changing Integer -> Long but it's interesting keeping Integer type to check the limit.
+        This limit could be increased changing Integer -> Long, but it's interesting keeping Integer type to check the limit.
          */
         var rnd = new Random();
         int[] numbersToCheck = new int[20]; //Random Array of numbers >=47
@@ -76,7 +76,7 @@ public class FibonacciTest {
     @Test
     public void CasePositiveOutput(){
         var rnd = new Random();
-        int[] numbersToCalculate = new int[20]; //Random Array of valids entries
+        int[] numbersToCalculate = new int[20]; //Random Array of valid entries
 
         for(int i = 0; i < numbersToCalculate.length;i++){
             numbersToCalculate[i] = rnd.nextInt(0,46);
