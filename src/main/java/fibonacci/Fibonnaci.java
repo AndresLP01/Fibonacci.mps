@@ -1,11 +1,8 @@
 package fibonacci;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
-import java.util.List;
 
 public class Fibonnaci {
-    List<Integer> values = new ArrayList<>();
     public int compute(int number){
         if (number < 0) // Negative number trap
             throw new InputMismatchException("ERROR: Number: "+number+ " is negative");
